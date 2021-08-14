@@ -32,9 +32,9 @@ function sproto.sharenew(cobj)
 	return setmetatable(self, sproto_nogc)
 end
 
-function sproto.parse(ptext)
+function sproto.parse(ptext, filename)
 	local parser = require "sprotoparser"
-	local pbin = parser.parse(ptext)
+	local pbin = parser.parse(ptext, filename)
 	return sproto.new(pbin)
 end
 
